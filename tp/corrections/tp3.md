@@ -1,0 +1,11 @@
+ALGO
+VARIABLES
+  A, B, C : entier
+DÉBUT
+  A <— 7    // A = 7
+  B <— 17   // B = 17
+  A <— B    // A = 17
+  B <— A+5  // B = 22
+  C <— A+B  // C = 39
+  C <— B-A  // C = 5
+FIN

@@ -1,5 +1,6 @@
 ALGO IntervertirVariables
-VARIABLES a, b, c : entier
+VARIABLES 
+    A, B, C : entier
 DÉBUT
     A <- 6
     B <- 2

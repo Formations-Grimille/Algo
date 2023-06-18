@@ -1,14 +1,15 @@
-# TP 3 : Petit entraînement
+# TP 3 : Entraînement arithmétique
 
 Donnez les valeurs des variables A, B et C après exécution des instructions suivantes ?
 
-Variables
-         A, B, C : entier
-         Début
-         A <— 7
-         B <— 17
-         A <— B
-         B <— A+5
-         C <— A+B
-         C <— B-A
-         Fin
+ALGO
+VARIABLES
+  A, B, C : entier
+DÉBUT
+  A <— 7
+  B <— 17
+  A <— B
+  B <— A+5
+  C <— A+B
+  C <— B-A
+FIN

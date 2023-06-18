@@ -1,0 +1,19 @@
+ALGO NbSuperieurA12
+
+CONSTANTES
+  nbATester<-12 : entier
+VARIABLES
+  nb : entier
+
+DÉBUT
+
+    ÉCRIRE("Saisir un nombre entier")
+    LIRE(nb)
+
+    SI (nb > nbATester) ALORS
+        ÉCRIRE("Le nombre", nb, "est supérieur à", nbATester)
+    SINON
+        ÉCRIRE("Le nombre", nb, "est inférieur ou égal à", nbATester)
+    FINSI
+
+FIN

@@ -1,0 +1,23 @@
+ALGO CleUSB
+
+VARIABLES
+    nbCle, prix : entier
+
+DÉBUT
+
+    ÉCRIRE("Combien de clé USB souhaitez-vous ?")
+    LIRE(nbCle)
+
+    SI (nbCle < 10) ALORS
+      prix <- nbCle * 5
+    SINON
+      SI (nbCle <= 20) alors
+          prix <- nbCle * 4
+      SINON
+          prix <- nbCle * 3
+      FINSI
+    FINSI
+
+    ÉCRIRE("Le prix à payer est de :", prix)
+
+FIN
