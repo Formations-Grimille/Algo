@@ -1,0 +1,85 @@
+----------------------------------------
+ALGO Distributeur
+
+// Qu'est ce qu'une boisson ?
+ENREGISTREMENT Boisson
+  code : chaine
+  nom : chaine
+  prix : reel
+FINENREGISTREMENT
+
+VARIABLES
+  boissons : TABLEAU [4] DE Boisson // Liste des boissons du distributeur
+  choix : chaine
+  i : entier
+  index: entier
+  monnaie : reel
+  appoint : reel
+
+DEBUT
+  // Remplir notre distributeur
+  boissons[0] <- {
+    code : "1A"
+    nom : "Coca-cola"
+    prix: 0.8
+  }
+
+  boissons[1] <- {
+    code : "1B"
+    nom : "Fanta"
+    prix: 0.7
+  }
+
+  boissons[2] <- {
+    code : "1C"
+    nom : "Ice Tea"
+    prix: 0.7
+  }
+
+  boissons[3] <- {
+    code : "1D"
+    nom : "Perrier"
+    prix: 1
+  }
+
+  // Choix de la boisson
+  ECRIRE("---------------------")
+  ECRIRE("Choisir votre boisson")
+  ECRIRE("---------------------")
+
+  LIRE(choix) // 1B
+
+  POUR i ALLANT DE 0 À 3 FAIRE
+      SI (boissons[i].code = choix) ALORS
+          index <- i
+      FINSI
+  FINPOUR
+
+
+  // Afficher le prix
+  ECRIRE("---------------------")
+  ECRIRE("Boisson choisie : ", boissons[index].nom, "#", boissons[index].code)
+  ECRIRE("au prix de ", boissons[index].prix, "€")
+  ECRIRE("---------------------")
+
+  // Boisson choisie : Fanta #1B 
+  // au prix de 0.70€
+
+  // Paiement
+  ECRIRE("Veuillez insérer vos pièces...")
+  LIRE(monnaie)
+
+  TANTQUE ( monnaie < boissons[index].prix )
+    ECRIRE("Il manque ", boissons[index].prix - monnaie, "€")
+    LIRE(appoint)
+
+    monnaie <- monnaie + appoint
+  FINTANTQUE
+
+  // Rendre la monnaie
+  SI (monnaie > boissons[index].prix) ALORS 
+      ECRIRE("Voilà votre monnaie :", monnaie - boissons[index].prix ,"€")
+  FINSI
+  
+  ECRIRE("Votre boisson ", boissons[index].nom, " est prête !")
+FIN

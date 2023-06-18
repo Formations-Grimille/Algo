@@ -1,0 +1,97 @@
+ENREGISTREMENT Vehicule
+  id: chaine
+  startDate: Date
+  endDate: Date
+FINENREGISTREMENT
+
+
+FONCTION getTicket()
+VARIABLES taille : entier
+DÉBUT
+
+  taille <- COMPTEUR(vehicules) + 1
+  REDIMENSIONNER(vehicules[taille])
+
+  ÉCRIRE("Saisir votre plaque d'immatriculation")
+  LIRE(vehicules[taille-1].id)
+
+  // Stocker la date et l'heure d'arrivée dans le parking
+  // getDate() nous renvoie quelquechose comme : 2020-11-20T16:39:00
+  vehicules[taille-1].startDate <- getDate()
+
+  ÉCRIRE("Prenez votre ticket")
+
+FINFONCTION
+
+
+FONCTION parkingPayment(plaque: chaine)
+VARIABLES 
+  i, duree : entier
+  prix : flottant
+DÉBUT
+
+  // Recherchons le véhicule en question dans le tableau de véhicules
+  POUR i ALLANT DE 0 À COMPTEUR(vehicules) - 1 FAIRE
+    SI (plaque = vehicules[i].id) ALORS 
+      // On stocke l'heure de départ
+      vehicules[i].endDate <- getDate()
+
+      // Récupérer le temps passé en minutes
+      duree <- getDiffDate(vehicules[i].startDate, vehicules[i].endDate)
+
+            // Calculer le prix à payer
+      SI (duree <= 15) ALORS
+        prix <- 0.8
+      SINON
+        SI (duree <= 30) ALORS
+          prix <- 1.3
+        SINON
+          SI (duree <= 45) ALORS
+            prix <- 1.7
+          SINON
+            prix <- 6
+          FINSI
+        FINSI
+      FINSI
+
+      ÉCRIRE("Le prix à payer est de :", prix, "€")
+    FINSI
+  FINPOUR
+FINFONCTION
+
+
+ALGO Parking
+
+VARIABLES
+    vehicules: tableau[] de Vehicule
+    choix: entier
+    currentId: chaine
+
+DÉBUT
+
+  RÉPÉTER
+    ÉCRIRE("1 - Obtenir un ticket")
+    ÉCRIRE("2 - Payer le parking")
+    ÉCRIRE("0 - Commande secrète pour fermer le parking")
+    LIRE(choix)
+
+    SI (choix = 1) ALORS
+            
+      // Obtenir un ticket
+      // faisons appel à la fonction getTicket
+      getTicket()
+
+    SINON
+      SI (choix = 2) ALORS
+                
+        // Quel véhicule sort du parking ?
+        LIRE(currentId)
+
+        // Payer le parking
+        parkingPayment(currentId)
+
+      FINSI
+    FINSI
+
+  JUSQU'À (choix = 0)
+FIN

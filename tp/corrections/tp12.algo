@@ -6,15 +6,15 @@ VARIABLES
 DÉBUT
   nbMax <- 0
 
-  POUT i ALLANT DE 1 À 20 FAIRE
+  POUR i ALLANT DE 1 À 5 FAIRE
 
-      ÉCRIRE("Saisir un nombre entier")
-      LIRE(nb)
+    ÉCRIRE("Saisir un nombre entier")
+    LIRE(nb)
 
-      /* Ajout de i = 1 pour mettre systématiquement la valeur de nb dans nbMax à la première itération */
-      SI (nb > nbMax) OU (i = 1) ALORS
-          nbMax <- nb
-      FINSI
+    /* Ajout de i = 1 pour mettre systématiquement la valeur de nb dans nbMax à la première itération */
+    SI (nb > nbMax) OU (i = 1) ALORS
+      nbMax <- nb
+    FINSI
 
   FINPOUR
 

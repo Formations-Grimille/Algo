@@ -1,23 +1,23 @@
 ALGO OrdreAlphabetique
 
 VARIABLES
-    nom1, nom2, nom3 : chaine
+  nom1, nom2, nom3 : chaine
 
 DÉBUT
 
-    ÉCRIRE("Saisir un premier nom")
-    LIRE(nom1)
+  ÉCRIRE("Saisir un premier nom")
+  LIRE(nom1)
 
-    ÉCRIRE("Saisir un deuxième nom")
-    LIRE(nom2)
+  ÉCRIRE("Saisir un deuxième nom")
+  LIRE(nom2)
 
-    ÉCRIRE("Saisir un troisième nom")
-    LIRE(nom3)
+  ÉCRIRE("Saisir un troisième nom")
+  LIRE(nom3)
 
-    SI (nom1 < nom2) ET (nom2 < nom3) ALORS 
-        ÉCRIRE("Les noms sont dans l'ordre alphabétique")
-    SINON
-        ÉCRIRE("Les noms ne sont pas dans l'ordre alphabétique")
-    FINSI
+  SI (nom1 < nom2) ET (nom2 < nom3) ALORS 
+    ÉCRIRE("Les noms sont dans l'ordre alphabétique")
+  SINON
+    ÉCRIRE("Les noms ne sont pas dans l'ordre alphabétique")
+  FINSI
 
 FIN
