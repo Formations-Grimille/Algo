@@ -2,11 +2,7 @@ ALGO CalculFacture
 
 VARIABLES
   txTVA, prixHT, prixTTC : flottant
-  nbArticles : entier
-
 DÉBUT
-  ÉCRIRE("Saisir le nombre d'articles")
-  LIRE(nbArticles)
 
   ÉCRIRE("Saisir le prix HT unitaire d'un article")
   LIRE(prixHT)
@@ -14,7 +10,7 @@ DÉBUT
   ÉCRIRE("Saisir le taux de TVA (20, 10, 5.5 par exemple)")
   LIRE(txTVA)
 
-  prixTTC <- prixHT * (1 + txTVA/100) * nbArticles
+  prixTTC <- prixHT * (1 + txTVA/100)
 
   ÉCRIRE("Le prix TTC total est de :", prixTTC, "€")
 FIN

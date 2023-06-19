@@ -2,7 +2,7 @@
 
 Donnez les valeurs des variables A, B et C après exécution des instructions suivantes ?
 
-ALGO
+ALGO ValeursVariables
 VARIABLES
   A, B, C : entier
 DÉBUT
