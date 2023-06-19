@@ -1,23 +1,23 @@
-ALGO OrdreAlphabetique
+ALGO CleUSB
 
 VARIABLES
-  nom1, nom2, nom3 : chaine
+  nbCle, prix : entier
 
 DÉBUT
 
-  ÉCRIRE("Saisir un premier nom")
-  LIRE(nom1)
+  ÉCRIRE("Combien de clé USB souhaitez-vous ?")
+  LIRE(nbCle)
 
-  ÉCRIRE("Saisir un deuxième nom")
-  LIRE(nom2)
-
-  ÉCRIRE("Saisir un troisième nom")
-  LIRE(nom3)
-
-  SI (nom1 < nom2) ET (nom2 < nom3) ALORS 
-    ÉCRIRE("Les noms sont dans l'ordre alphabétique")
+  SI (nbCle < 10) ALORS
+    prix <- nbCle * 5
   SINON
-    ÉCRIRE("Les noms ne sont pas dans l'ordre alphabétique")
+    SI (nbCle <= 20) alors
+      prix <- nbCle * 4
+    SINON
+      prix <- nbCle * 3
+    FINSI
   FINSI
+
+  ÉCRIRE("Le prix à payer est de :", prix)
 
 FIN

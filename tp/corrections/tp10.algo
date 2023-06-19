@@ -1,0 +1,40 @@
+// Première solution
+ALGO TantQue1A3
+
+VARIABLES
+  nb : entier
+
+DÉBUT
+
+  ÉCRIRE("Saisir un nombre entre 1 et 3")
+  LIRE(nb)
+
+  TANTQUE (nb < 1) OU (nb > 3) FAIRE
+
+    ÉCRIRE("Saisie incorrecte veuillez recommencer")
+    LIRE(nb)
+
+  FINTANTQUE
+
+  ÉCRIRE("Bravo ! La saisie est correcte !")
+
+FIN
+
+
+//Deuxième solution
+ALGO RepeterJusqua1A3
+
+VARIABLES
+  nb : entier
+
+DÉBUT
+  RÉPETER
+
+  ECRIRE("Saisir un nombre entre 1 et 3")
+  LIRE(nb)
+
+  JUSQU'À (nb >= 1) ET (nb <= 3)
+  ECRIRE("Bravo ! La saisie est correcte !")
+
+FIN
+

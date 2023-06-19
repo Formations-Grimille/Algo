@@ -1,40 +1,24 @@
-// Première solution
-ALGO TantQue1A3
+ALGO OrdreAlphabetique
 
 VARIABLES
-  nb : entier
+  nom1, nom2, nom3 : chaine
 
 DÉBUT
 
-  ÉCRIRE("Saisir un nombre entre 1 et 3")
-  LIRE(nb)
+  ÉCRIRE("Saisir un premier nom")
+  LIRE(nom1)
 
-  TANTQUE (nb < 1) OU (nb > 3) FAIRE
+  ÉCRIRE("Saisir un deuxième nom")
+  LIRE(nom2)
 
-    ÉCRIRE("Saisie incorrecte veuillez recommencer")
-    LIRE(nb)
+  ÉCRIRE("Saisir un troisième nom")
+  LIRE(nom3)
 
-  FINTANTQUE
-
-  ÉCRIRE("Bravo ! La saisie est correcte !")
-
-FIN
-
-
-//Deuxième solution
-ALGO RepeterJusqua1A3
-
-VARIABLES
-  nb : entier
-
-DÉBUT
-  RÉPETER
-
-  ECRIRE("Saisir un nombre entre 1 et 3")
-  LIRE(nb)
-
-  JUSQU'À (nb >= 1) ET (nb <= 3)
-  ECRIRE("Bravo ! La saisie est correcte !")
+  SI (nom1 < nom2) ET (nom2 < nom3) ALORS 
+    ÉCRIRE("Les noms sont dans l'ordre alphabétique")
+  SINON
+    ÉCRIRE("Les noms ne sont pas dans l'ordre alphabétique")
+  FINSI
 
 FIN
 

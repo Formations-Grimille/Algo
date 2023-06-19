@@ -1,4 +1,4 @@
-# TP 9 : Saisie de l'utilisateur
+# TP 9 : Noms par ordre alphabétique
 
-Écrire un algorithme qui demande de saisir un nombre à l'utilisateur tant que le nombre
-saisi n'est pas compris entre 1 et 3 inclus.
+Écrire un algorithme qui demande de saisir trois noms à l'utilisateur et qui retourne si les noms saisis sont
+dans l'ordre alphabétique ou non
