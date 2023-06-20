@@ -1,31 +1,15 @@
-ALGO EtudiantsEtMatieres
-
-VARIABLES
-  notes: tableau[3, 15] de flottant
-  matieres: tableau[3] de chaine
+ALGO  Notes
+CONSTANTES 
+  N <- 15, M <- 3 : entier
+VARIABLES 
+  note : tableau[N, M] d'entier
   i, j : entier
-
 DÉBUT
-
-  //matieres[0] <- "informatique"
-  //matieres[1] <- "comptabilité"
-  //matieres[2] <- "mathématiques"
-
-  POUR i ALLANT DE 0 À 2 FAIRE
-    ÉCRIRE("Saisir le nom de la matière n°", i+1)
-    LIRE(matieres[i])
-  FINPOUR
-
-  // Parcourir les lignes du tableau 2D
-  POUR i ALLANT DE 0 À 2 FAIRE
-
-    // Parcourir les colonnes de chaque ligne du tableau 2D
-    POUR j ALLANT DE 0 À 14 FAIRE
-
-      ÉCRIRE("Saisir la note de la matière ", matieres[i], "pour l'étudiant n°", j+1)
-      LIRE(notes[i,j])
-      
+  //Remplissage du tableau note
+  POUR i ALLANT DE 0 À N-1 FAIRE
+    POUR j ALLANT DE 0 À M-1 FAIRE
+       ÉCRIRE("Entrer la note de l'étudiant", i+1, " dans la matière ", j+1)
+       LIRE(note[i, j])
     FINPOUR
   FINPOUR
-
 FIN
