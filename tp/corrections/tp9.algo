@@ -14,7 +14,7 @@ DÉBUT
   ÉCRIRE("Saisir un troisième nom")
   LIRE(nom3)
 
-  SI (nom1 < nom2) ET (nom2 < nom3) ALORS 
+  SI (nom1 <= nom2) ET (nom2 <= nom3) ALORS 
     ÉCRIRE("Les noms sont dans l'ordre alphabétique")
   SINON
     ÉCRIRE("Les noms ne sont pas dans l'ordre alphabétique")
