@@ -9,7 +9,7 @@ DÉBUT
   ÉCRIRE("Saisir un nombre entre 1 et 3")
   LIRE(nb)
 
-  TANTQUE (nb < 1) OU (nb > 3) FAIRE
+  TANTQUE (nb < 1 OU nb > 3) FAIRE
 
     ÉCRIRE("Saisie incorrecte veuillez recommencer")
     LIRE(nb)
@@ -37,4 +37,3 @@ DÉBUT
   ECRIRE("Bravo ! La saisie est correcte !")
 
 FIN
-
